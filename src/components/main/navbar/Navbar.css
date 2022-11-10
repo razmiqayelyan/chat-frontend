@@ -1,0 +1,28 @@
+.navbar{
+    width: 100vw;
+    height: 80px;
+    background-color: rgba(0, 0, 250, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: large;
+}
+
+.search-user{
+    height: 5vh;
+    border: 0;
+}
+
+.search-user-button{
+    height: 5vh;
+    border: 0;
+    cursor: pointer;
+    background-color:rgba(0, 111, 250);
+    color:white
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
