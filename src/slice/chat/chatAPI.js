@@ -1,6 +1,5 @@
 import axios from "axios"
-
-const DOMAIN = 'https://ragram.herokuapp.com/'
+import { DOMAIN } from "../userAPI"
 
 
 const getChats = async(token) => {
@@ -76,7 +75,7 @@ const accessChat = async(user, token) => {
     )
 }
 
-export default {
+const functions = {
     getChats,
     newGroupChat,
     accessChat,
@@ -84,3 +83,4 @@ export default {
     groupMemberAdd,
     groupNameEdit
 }
+export default functions

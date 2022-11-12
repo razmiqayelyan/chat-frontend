@@ -1,7 +1,6 @@
 import axios from "axios"
+import { DOMAIN } from "../userAPI"
 
-
-const DOMAIN = 'https://ragram.herokuapp.com/'
 
 const createMessage = async(content, chatId, token) => {
     return await axios.post(DOMAIN + 'api/message', {
@@ -26,7 +25,9 @@ const getMessages = async(chatId, token) => {
     })
 }
 
-export default {
+const functions = {
     getMessages,
     createMessage
 }
+
+export default functions

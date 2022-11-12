@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { io } from 'socket.io-client'
+import { DOMAIN } from '../userAPI'
 
-
-
-export const ENDPIONT = "https://ragram.herokuapp.com/"
 
 
 const initialState = {
@@ -20,7 +18,7 @@ const socketSlice = createSlice({
     initialState,
     reducers:{
         setSocket: (state) => {
-            state.socket = io(ENDPIONT)
+            state.socket = io(DOMAIN)
         },
         removeSocket: (state) => {
             state.socket = null

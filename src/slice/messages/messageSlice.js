@@ -42,6 +42,9 @@ const messageSlice = createSlice({
     name:"getMessages",
     initialState,
     reducers:{
+        clearMessages: (state) => {
+            state.messages = null
+        },
         addMessage: (state, action) => {
             if(!state.messages) return
             state.messages.push(action.payload)
@@ -74,6 +77,6 @@ const messageSlice = createSlice({
     }
 })
 
-export const { addMessage, offEmiting, messageInitial, startTyping, finishTyping } = messageSlice.actions
+export const { addMessage, offEmiting, messageInitial, startTyping, finishTyping ,clearMessages} = messageSlice.actions
 
 export default messageSlice.reducer

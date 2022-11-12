@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const DOMAIN = 'https://ragram.herokuapp.com/'
+// export const DOMAIN = 'https://ragram.herokuapp.com/'
+export const DOMAIN = 'http://localhost:5500/'
 
 const login = async(user) => {
 
@@ -51,10 +52,11 @@ const allUsers = async(token) => {
     })
 }
 
-export default {
+const functions = {
     login,
     validateToken,
     allUsers,
     register,
     editUser
 }
+export default functions

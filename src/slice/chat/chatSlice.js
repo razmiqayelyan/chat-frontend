@@ -87,7 +87,7 @@ const chatSlice = createSlice({
     initialState,
     reducers:{
         setSelectedChat: (state, action) => {
-            state.selectedChat = action.payload.chat || null
+            state.selectedChat = action.payload?.chat || null
         },
         toggleAddGroupModel: (state) => {
             state.createGroupPopup = !state.createGroupPopup
@@ -100,6 +100,9 @@ const chatSlice = createSlice({
         },
         toggleGroupMembersPopup: (state) => {
             state.groupMembersPopup = !state.groupMembersPopup
+        },
+        unshiftChats: (state, action) => {
+            state.chats.unshift(action.payload)
         }
 
     },
@@ -115,11 +118,11 @@ const chatSlice = createSlice({
         .addCase(OneToOneChat.fulfilled, (state, action) => {
             if(!action.payload) return
             if(state.chats.filter((ch) => ch._id === action.payload._id).length > 0){
-                state.searchedChat = action.payload
+                state.selectedChat = action.payload
             }
             else {
                 state.chats.unshift(action.payload)
-                state.searchedChat = action.payload
+                state.selectedChat = action.payload
             }
 
         })
@@ -155,6 +158,6 @@ const chatSlice = createSlice({
     }
 })
 
-export const {setSelectedChat, toggleAddGroupModel, chatInitial, removeSearchedChat, toggleGroupMembersPopup} = chatSlice.actions
+export const {setSelectedChat, toggleAddGroupModel, chatInitial, removeSearchedChat, toggleGroupMembersPopup, unshiftChats} = chatSlice.actions
 
 export default chatSlice.reducer
