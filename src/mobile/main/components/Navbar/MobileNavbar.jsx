@@ -2,7 +2,7 @@ import { AppBar, Avatar, IconButton, Toolbar } from '@mui/material'
 import React, { useState , useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { getUsers, setWithUser, toggleLeftDrawer, toggleUserModal, userInitial, userState } from '../../../../slice/userSlice'
+import { getUsers, setWithUser, toggleLeftDrawer, toggleUserModal, userInitial, userState } from '../../../../slice/user/userSlice'
 import styles from './style'
 import LogoutIcon from '@mui/icons-material/Logout';
 import HomeIcon from '@mui/icons-material/Home';
@@ -14,13 +14,16 @@ import { Box } from '@mui/system'
 
 const MobileNavbar = () => {
   const dispatch = useDispatch()
-  const { user , allUsers, withUser} = useSelector(userState)
+  const { user , allUsers} = useSelector(userState)
   const [searchUser, setSearchUser] = useState(null) 
   const [logout, setLogout] = useState(false)
   const navigate = useNavigate();
+
+
   useEffect(() => {
     if(allUsers) return
     else dispatch(getUsers())
+    // eslint-disable-next-line 
   }, [allUsers])
 
 
@@ -32,8 +35,10 @@ const MobileNavbar = () => {
       dispatch(setWithUser(searchUser))
       setSearchUser(null)
     }
+    // eslint-disable-next-line 
   }, [searchUser])
 
+  
   const openModal = () => {
     dispatch(toggleUserModal())
   }
@@ -45,7 +50,7 @@ const MobileNavbar = () => {
       navigate("/login")
       window.location = "/"
     }
-  }, [logout])
+  }, [logout, navigate])
   const signOut = () => {
     localStorage.removeItem("token")
     dispatch(userInitial())

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'; 
 import { useDispatch, useSelector } from 'react-redux';
 import { chatState, setSelectedChat } from '../../../../slice/chat/chatSlice';
-import {  toggleLeftDrawer, userState } from '../../../../slice/userSlice';
+import {  toggleLeftDrawer, userState } from '../../../../slice/user/userSlice';
 import { notificationState, removeNotification } from '../../../../slice/notification/notificationSlice';
 import { getAllMessages } from '../../../../slice/messages/messageSlice';
 import { Avatar, AvatarGroup, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
@@ -34,6 +34,7 @@ const SingleChatList = ({chat, setChatSearch}) => {
     useEffect(() => {
         if(notifications[chat?._id]) setNotifExist(true)
         else setNotifExist(false)
+        // eslint-disable-next-line 
     }, [notifications])
 
 
@@ -58,6 +59,7 @@ const SingleChatList = ({chat, setChatSearch}) => {
         if(!selectedChat) return 
         dispatch(getAllMessages(selectedChat._id))
         dispatch(removeNotification(selectedChat._id))
+        // eslint-disable-next-line 
     }, [selectedChat])
     
 

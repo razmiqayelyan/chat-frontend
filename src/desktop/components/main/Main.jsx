@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { userState } from '../../../slice/userSlice'
+import { userState } from '../../../slice/user/userSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';

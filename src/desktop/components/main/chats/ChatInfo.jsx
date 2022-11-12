@@ -5,7 +5,7 @@ import { chatState, setSelectedChat } from '../../../../slice/chat/chatSlice';
 import {getAllMessages} from '../../../../slice/messages/messageSlice';
 import GroupsIcon from '@mui/icons-material/Groups';
 import PersonIcon from '@mui/icons-material/Person';
-import { userState } from '../../../../slice/userSlice';
+import { userState } from '../../../../slice/user/userSlice';
 import { useEffect } from 'react';
 import { notificationState, removeNotification } from '../../../../slice/notification/notificationSlice';
 import { useState } from 'react';

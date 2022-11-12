@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { chatState, createGroupChat, toggleAddGroupModel } from "../../../slice/chat/chatSlice"
 import { Autocomplete, Avatar, Checkbox, FormGroup, Paper, TextField } from '@mui/material';
-import { getUsers, userState } from "../../../slice/userSlice";
+import { getUsers, userState } from "../../../slice/user/userSlice";
 import { useState } from 'react';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import { useEffect } from 'react';

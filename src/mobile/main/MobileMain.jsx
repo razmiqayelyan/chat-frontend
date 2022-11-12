@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { userState } from '../../slice/userSlice'
+import { userState } from '../../slice/user/userSlice'
 import { chatState } from '../../slice/chat/chatSlice'
 import { activateSocket, setSocket, socketState } from '../../slice/socketAPI/socketSlice'
 import { addMessage, finishTyping, messageState, offEmiting, startTyping } from '../../slice/messages/messageSlice'

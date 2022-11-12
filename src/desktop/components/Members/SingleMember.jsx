@@ -2,7 +2,7 @@ import { Avatar, IconButton, ListItem, ListItemIcon, ListItemText } from '@mui/m
 import React from 'react'
 import Cancel from '@mui/icons-material/Cancel';
 import { useDispatch, useSelector } from 'react-redux';
-import { userState } from '../../../slice/userSlice';
+import { userState } from '../../../slice/user/userSlice';
 import { chatState, removeMemberFromGroup } from '../../../slice/chat/chatSlice'
 import styles from './style'
 

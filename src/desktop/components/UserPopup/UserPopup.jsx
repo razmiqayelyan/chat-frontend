@@ -1,7 +1,7 @@
 import { Avatar, Box, Button, Modal, Paper, TextField } from '@mui/material';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { profileEdit, toggleUserModal, userState } from '../../../slice/userSlice'
+import { profileEdit, toggleUserModal, userState } from '../../../slice/user/userSlice'
 import styles from './style'
 
   

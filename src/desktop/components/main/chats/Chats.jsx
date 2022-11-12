@@ -1,7 +1,7 @@
 import { useEffect , useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { chatState, getChatsByToken } from '../../../../slice/chat/chatSlice'
-import { userState } from '../../../../slice/userSlice'
+import { userState } from '../../../../slice/user/userSlice'
 import ChatInfo from './ChatInfo'
 import * as React from 'react';
 import ListSubheader from '@mui/material/ListSubheader';

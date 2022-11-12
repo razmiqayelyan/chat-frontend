@@ -4,7 +4,7 @@ import { OneToOneChat, setSelectedChat, toggleAddGroupModel } from '../../../../
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { AppBar, Autocomplete, Avatar, IconButton, TextField, Toolbar } from '@mui/material'
-import { getUsers, setWithUser, toggleUserModal, userInitial, userState } from '../../../../slice/userSlice';
+import { getUsers, setWithUser, toggleUserModal, userInitial, userState } from '../../../../slice/user/userSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
 import { useEffect, useState } from 'react';

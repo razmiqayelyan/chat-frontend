@@ -1,5 +1,5 @@
 import axios from "axios"
-import { DOMAIN } from "../userAPI"
+import { DOMAIN } from "../user/userAPI"
 
 
 const getChats = async(token) => {

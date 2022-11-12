@@ -1,12 +1,11 @@
 import { Avatar, AvatarGroup, Box, IconButton } from '@mui/material'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { chatState, setSelectedChat, toggleGroupMembersPopup } from '../../../../../slice/chat/chatSlice'
-import { toggleLeftDrawer, userState } from '../../../../../slice/userSlice'
+import { chatState, toggleGroupMembersPopup } from '../../../../../slice/chat/chatSlice'
+import { toggleLeftDrawer, userState } from '../../../../../slice/user/userSlice'
 import styles from './style'
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBack from '@mui/icons-material/ArrowBack';
-import { clearMessages } from '../../../../../slice/messages/messageSlice'
 
 
 const MobileChatHeader = () => {

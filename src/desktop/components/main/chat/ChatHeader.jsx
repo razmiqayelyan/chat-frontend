@@ -3,7 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { chatState, toggleGroupMembersPopup } from '../../../../slice/chat/chatSlice';
 import { Box } from '@mui/system';
-import { userState } from '../../../../slice/userSlice';
+import { userState } from '../../../../slice/user/userSlice';
 import styles from './style'
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState , useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { userLogin, userState } from '../../../slice/userSlice';
+import { userLogin, userState } from '../../../slice/user/userSlice';
 import { Box, Button, Paper, TextField, Typography } from '@mui/material';
 import styles from './style'
 
@@ -36,8 +36,8 @@ const LoginPage = () => {
           <Box>      
             <Typography sx={styles.login_font} variant='h4'>Login</Typography>
           </Box>
-          <TextField label="Email"  name='email' onChange={handleChange} type="email" />
-          <TextField label="Password" name="password" onChange={handleChange}  type="password" />
+          <TextField required aria-required label="Email"  name='email' onChange={handleChange} type="email" />
+          <TextField required aria-required label="Password" name="password" onChange={handleChange}  type="password" />
           <Link to={'/register'} style={styles.to_register_link}>Dont have account?</Link>
           <Button type='submit' >Login</Button>
       </form>

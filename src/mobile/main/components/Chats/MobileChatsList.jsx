@@ -1,9 +1,9 @@
-import { Button, List, ListItemText, ListSubheader, Tab, Tabs, TextField } from '@mui/material'
+import { Button, List, ListSubheader, Tab, Tabs, TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { chatState, getChatsByToken, toggleAddGroupModel } from '../../../../slice/chat/chatSlice'
-import { userState } from '../../../../slice/userSlice'
+import { userState } from '../../../../slice/user/userSlice'
 import SingleChatList from './SingleChatList'
 import styles from './style'
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
@@ -44,6 +44,7 @@ const MobileChatList = () => {
 
     useEffect(() => {
         dispatch(getChatsByToken())
+        // eslint-disable-next-line 
     }, [token])
     
     return (
@@ -67,7 +68,10 @@ const MobileChatList = () => {
         </ListSubheader>
     }
     >  
-    {chats?.filter(filterByType).filter(chatFilter).map((chat) => <SingleChatList chat={chat} key={chat._id} setChatSearch={setChatSearch} />)}
+    {chats?.filter(filterByType).filter(chatFilter).map((chat) =>  {
+            // eslint-disable-next-line 
+            return  <SingleChatList chat={chat} key={chat._id} setChatSearch={setChatSearch} />
+    })}
     </List>
 );
 }

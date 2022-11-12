@@ -2,8 +2,8 @@ import { Autocomplete, Avatar, List, ListSubheader, Tab, Tabs, TextField } from 
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { chatState, getChatsByToken, OneToOneChat, setSelectedChat } from '../../../../slice/chat/chatSlice'
-import { setWithUser, toggleLeftDrawer, userState } from '../../../../slice/userSlice'
+import { chatState, getChatsByToken, OneToOneChat } from '../../../../slice/chat/chatSlice'
+import { setWithUser, userState } from '../../../../slice/user/userSlice'
 import SingleChatList from './SingleChatList'
 import styles from './style'
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
@@ -42,6 +42,7 @@ const MobileChatListDrawer = () => {
 
     useEffect(() => {
         dispatch(getChatsByToken())
+        // eslint-disable-next-line 
     }, [token])
     
     useEffect(() => {
@@ -50,27 +51,30 @@ const MobileChatListDrawer = () => {
         dispatch(setWithUser(searchUser))
         setSearchUser(null)
       }
+      // eslint-disable-next-line 
     }, [searchUser])
   
     useEffect(() => {
       if(withUser) {
         dispatch(OneToOneChat(withUser))
       }
+      // eslint-disable-next-line 
     }, [withUser])
   
-      const getChatMessages = (chat) => {
-          if(!chat._id) return
-          dispatch(setSelectedChat({chat}))
-          dispatch(getAllMessages(chat._id))
-          dispatch(removeNotification(chat._id))
-          setChatSearch("")
-      }
+      // const getChatMessages = (chat) => {
+      //     if(!chat._id) return
+      //     dispatch(setSelectedChat({chat}))
+      //     dispatch(getAllMessages(chat._id))
+      //     dispatch(removeNotification(chat._id))
+      //     setChatSearch("")
+      // }
   
     useEffect(() => {
       if(!selectedChat) return 
       dispatch(getAllMessages(selectedChat._id))
       dispatch(removeNotification(selectedChat._id))
       setChatSearch("")
+      // eslint-disable-next-line 
   }, [selectedChat])
 
     return (

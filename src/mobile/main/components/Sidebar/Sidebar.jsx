@@ -1,7 +1,7 @@
 import {  Box, SwipeableDrawer } from '@mui/material'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import  {  toggleLeftDrawer, userState } from '../../../../slice/userSlice'
+import  {  toggleLeftDrawer, userState } from '../../../../slice/user/userSlice'
 import styles from './style'
 import MobileChatListDrawer from '../Chats/MobileChatsListDrawer'
 

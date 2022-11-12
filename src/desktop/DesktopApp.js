@@ -9,7 +9,7 @@ import {
 import LoginPage from './components/login/LoginPage';
 import Register from './components/register/Register';
 import MainPage from './components/main/Main';
-import { userState, userValidation } from '../slice/userSlice';
+import { userState, userValidation } from '../slice/user/userSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

@@ -5,6 +5,7 @@ const MobileChatMessage = ({messages, user}) => {
     <>
      
     {messages?.map((message) => {
+      // eslint-disable-next-line 
  if(!message) return
  return (
    <div key={message._id} className={user._id === message.sender._id?"msg right-msg":"msg left-msg"}>

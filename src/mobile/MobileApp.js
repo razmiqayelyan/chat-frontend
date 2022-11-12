@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { userState, userValidation } from '../slice/userSlice'
+import { userState, userValidation } from '../slice/user/userSlice'
 import MobileLogin from '../mobile/login/MobileLogin'
 import MobileRegister from '../mobile/register/MobileRegister'
 import MobileMain from '../mobile/main/MobileMain'
@@ -24,6 +24,7 @@ const MobileApp = () => {
     if(token && !user) {
       dispatch(userValidation(token))
     }
+    // eslint-disable-next-line 
   }, [token])
 
   useEffect(() => {

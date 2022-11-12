@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { io } from 'socket.io-client'
-import { DOMAIN } from '../userAPI'
+import { DOMAIN } from '../user/userAPI'
 
 
 

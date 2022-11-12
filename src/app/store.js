@@ -3,7 +3,7 @@ import chatSlice from '../slice/chat/chatSlice';
 import messageSlice from '../slice/messages/messageSlice';
 import notificationSlice from '../slice/notification/notificationSlice';
 import socketSlice from '../slice/socketAPI/socketSlice';
-import userSlice from '../slice/userSlice';
+import userSlice from '../slice/user/userSlice';
 
 
 

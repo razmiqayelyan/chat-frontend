@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { addMemberToGroup, chatState, editGroupName, removeFromGroup, toggleGroupMembersPopup } from '../../../slice/chat/chatSlice'
 import { Autocomplete, Avatar, IconButton, LinearProgress, List,  ListSubheader,  Paper, TextField } from '@mui/material';
-import { userState } from '../../../slice/userSlice'
+import { userState } from '../../../slice/user/userSlice'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import SingleMember from './SingleMember';

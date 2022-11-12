@@ -2,7 +2,7 @@ import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import {  userRegister, userState } from '../../slice/userSlice'
+import {  userRegister, userState } from '../../slice/user/userSlice'
 import styles from './style'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
